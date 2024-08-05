@@ -32,6 +32,29 @@ namespace LINQ
             #endregion
 
             #endregion
+            #region Q2
+            #region First Point
+            //var sortarray = ProductsList.OrderBy(p => p.ProductName);
+            //foreach (var sort in sortarray)
+            //{
+            //    Console.WriteLine(sort);
+            //}
+            #endregion
+            #region Second Point
+            // string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //for (int i = 0; i < Arr.Length; i++)
+            //{
+            //    Arr[i]=Arr[i].ToLower();
+            //}
+            //Array.Sort(Arr);
+            //foreach (var str in Arr)
+            //{
+            //    Console.WriteLine(str);
+            //}
+            #endregion
+            #endregion
+
         }
+
     }
 }
