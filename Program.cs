@@ -53,6 +53,34 @@ namespace LINQ
             //}
             #endregion
             #endregion
+            #region Q3
+            #region FirstPoint
+            //var Highest = ProductsList.OrderByDescending(p => p.UnitsInStock);
+            //foreach(var high in Highest)
+            //{
+            //    Console.WriteLine(high);
+            //}
+            #endregion
+            #region Second Point
+            //string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var array=Arr.OrderBy(a=>a.Length).ThenBy(a=>a).ToArray();
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region ThirdPoint
+            //string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var Items=words
+            //    .OrderBy(word => word.Length)
+            //    .ThenBy(word => word,StringComparer.OrdinalIgnoreCase)
+            //    .ToList();
+            //foreach (var item in Items)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #endregion
 
         }
 
