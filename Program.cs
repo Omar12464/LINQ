@@ -134,7 +134,56 @@ namespace LINQ
             //}
             #endregion
             #endregion
+            #region LINQ - Set Operators
+            #region Q1
+            //var result = ProductList.Select(p => p.Category).Distinct().ToList();
+            //foreach(var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region Q2
+            //var productFirstLetters = ProductList.Select(p => p.ProductName[0]);
+            //var customerFirstLetters = CustomerList.Select(c => c.CustomerName[0]);
 
+            //var uniqueFirstLetters = productFirstLetters.Concat(customerFirstLetters)
+            //                                           .Distinct()
+            //                                           .OrderBy(letter => letter);
+
+            //Console.WriteLine("Unique first letters:");
+            //foreach (var letter in uniqueFirstLetters)
+            //{
+            //    Console.WriteLine(letter);
+            //}
+
+
+            #endregion
+            #region Q3
+            //var Common = ProductList.Select(p => p.ProductName[0])
+            //    .Intersect(CustomerList.Select(c=>c.CustomerName[0])).OrderBy(letter=>letter);
+            //foreach (var item in Common)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region q4
+            //var Common = ProductList.Select(p => p.ProductName[0])
+            //    .Except(CustomerList.Select(c => c.CustomerName[0])).OrderBy(letter => letter);
+            //foreach (var item in Common)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region Q5
+            //var plastcharachter = ProductList.Select(p => p.ProductName.Length >= 3 ? p.ProductName.Substring(p.ProductName.Length - 3) : p.ProductName);
+            //var clastcharachter = CustomerList.Select(p => p.CustomerName.Length >= 3 ? p.CustomerName.Substring(p.CustomerName.Length - 3) : p.CustomerName);
+            //var con=plastcharachter.Concat(clastcharachter).ToList();
+            //foreach (var c in con)
+            //{
+            //    Console.WriteLine(c);
+            //}
+            #endregion
+            #endregion
         }
     }
 }
