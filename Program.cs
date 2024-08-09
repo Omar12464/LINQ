@@ -1,4 +1,6 @@
-﻿using static LINQ.ListGenerators;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
+using static LINQ.ListGenerators;
 namespace LINQ
 {
     internal class Program
@@ -44,7 +46,95 @@ namespace LINQ
             //var result=Arr.Sum(x => x);
             //Console.WriteLine(result);
             #endregion
+            #region Q5
+            //string[] dictionary = File.ReadAllLines("dictionary_english.txt");
+            //var result = dictionary.Sum(d => d.Length);
+            //Console.WriteLine(result);
             #endregion
+            #region Q6
+            //string[] dictionary = File.ReadAllLines("dictionary_english.txt");
+            //var result = dictionary.Max(d => d.Length);
+            //Console.WriteLine(result);
+
+
+
+            #endregion
+            #region Q7
+            //string[] dictionary = File.ReadAllLines("dictionary_english.txt");
+            //var result = dictionary.Min(d => d.Length);
+            //Console.WriteLine(result);
+            #endregion
+            #region Q8
+            //string[] dictionary = File.ReadAllLines("dictionary_english.txt");
+            //var result = dictionary.Average(d => d.Length);
+            //Console.WriteLine(result);
+            #endregion
+            #region Q9
+            //var result = ProductList.GroupBy(c => c.Category).Select(y => new {category=y.Key,total=y.Sum(c=>c.UnitsInStock)}).ToList();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region Q10
+            //var result = ProductList.GroupBy(c => c.Category).Select(y => new { category = y.Key, Cheapestprice = y.Min(c => c.UnitPrice) }).ToList();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region Q11
+            //var result = ProductList
+            //    .GroupBy(p => p.Category)
+            //    .Select(g => new
+            //    {
+            //        Category = g.Key,
+            //        CheapestProducts = g
+            //            .Let(items => new
+            //            {
+            //                MinPrice = items.Min(p => p.UnitPrice)
+            //            })
+            //            .Let(minInfo => items
+            //                .Where(p => p.UnitPrice == minInfo.MinPrice)
+            //                .ToList()
+            //            )
+            //    })
+            //    .ToList();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+
+            #endregion
+            #region Q12
+            //var result = ProductList.GroupBy(p => p.Category).Select(p => new { category = p.Key, maxprice = p.Max(c => c.UnitPrice) }).ToList();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"category{item.category},Maxprice{item.maxprice}");
+            //}
+            #endregion
+            #region Q13
+            //var result = ProductList.GroupBy(p => p.Category).Select(categoryinfo => new { category = categoryinfo.Key, MostExpensive = categoryinfo.Where(cat => cat.UnitPrice == categoryinfo.Max(s => s.UnitPrice)) });
+            //foreach (var item in result)
+            //{
+            //    foreach(var items in item.MostExpensive)
+            //    {
+            //        Console.WriteLine($"{items.ProductName},{items.UnitPrice}");
+            //    }
+            //}
+            #endregion
+            #region Q14
+            //var result = ProductList.GroupBy(p => p.Category).Select(categoryinfo => new { category = categoryinfo.Key, AVGExpensive = categoryinfo.Where(cat => cat.UnitPrice == categoryinfo.Max(s => s.UnitPrice)) });
+            //foreach (var item in result)
+            //{
+            //    foreach(var items in item.MostExpensive)
+            //    {
+            //        Console.WriteLine($"{items.ProductName},{items.UnitPrice}");
+            //    }
+            //}
+            #endregion
+            #endregion
+
         }
     }
 }

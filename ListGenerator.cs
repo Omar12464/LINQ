@@ -7,7 +7,18 @@ using System.Xml.Linq;
 
 namespace LINQ
 {
-    class Product
+    class unitinstock : IComparer<Product>
+    {
+        public int Compare(Product? x, Product? y)
+        {
+            return x.UnitsInStock.CompareTo(y.UnitsInStock);
+        }
+        public bool Equals(Product x, Product y)
+        {
+            return x.UnitsInStock.Equals(y.UnitsInStock);
+        }
+    }
+    class Product:IComparer<Product>
     {
         public long ProductID { get; set; }
         public string ProductName { get; set; }
@@ -15,7 +26,14 @@ namespace LINQ
         public decimal UnitPrice { get; set; }
         public int UnitsInStock { get; set; }
 
-
+        public int Compare(Product? x, Product? y)
+        {
+            return x.UnitPrice.CompareTo(y.UnitPrice);
+        }
+        public bool Equals(Product? x, Product? y)
+        {
+            return x.UnitPrice.Equals(y.UnitPrice);
+        }
         public override string ToString()
             => $"ProductID:{ProductID},ProductName:{ProductName},Category{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";
 
@@ -257,6 +275,7 @@ namespace LINQ
 
         }
     }
+
 
 
 }
