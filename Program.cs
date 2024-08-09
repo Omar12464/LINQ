@@ -184,6 +184,34 @@ namespace LINQ
             //}
             #endregion
             #endregion
+            #region LINQ - Partitioning Operators
+            #region Q1
+            //var result = CustomerList.Where(c=>c.Country=="Washington").Select(c=>c.Orders).Take(3).ToList();
+            #endregion
+            #region Q2
+            //var result = CustomerList.Where(c=>c.Country=="Washington").Select(c=>c.Orders).Skip(2).ToList();
+            #endregion
+            #region Q3
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var result = numbers.TakeWhile((numbers, Index)=>numbers>=Index);
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+            #region Q4
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var result = numbers.SkipWhile(numbers => numbers %3!=0).ToList();
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+            #region Q5
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var RESULT = numbers.SkipWhile((numbers, index) => numbers < index));
+            #endregion
+            #endregion
         }
     }
 }
